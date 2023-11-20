@@ -10,8 +10,6 @@ fi
 
 sudo apt-get -y update 
 
-sudo apt-get -y install libsystemd-dev:arm64
-sudo apt-get -y install libssl-dev:arm64
-sudo apt-get -y install libzmq3-dev:arm64
+sudo apt-get -y install libsystemd-dev:arm64 libssl-dev:arm64 libzmq3-dev:arm64
 
 

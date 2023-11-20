@@ -72,9 +72,9 @@ static bool isSnap()
 //! @param[in] sslPort  The port number for SSL: 8443 if ctrlX COREvirtual with port forwarding 8443:443
 //! @result Connection string
 static std::string getConnectionString(
-  const std::string& ip = "192.168.1.1",
-  const std::string& user = "boschrexroth",
-  const std::string& password = "boschrexroth",
+  const std::string& ip = "192.168.1.2",
+  const std::string& user = "ipa",
+  const std::string& password = "Nobelstrasse12",
   int sslPort = 443)
 {
   if (isSnap())
@@ -100,9 +100,9 @@ static std::string getConnectionString(
 //! @param[in] sslPort  The port number for SSL: 8443 if ctrlX COREvirtual with port forwarding 8443:443
 //! @result IClient instance or nullptr on error
 static comm::datalayer::IClient* getClient(comm::datalayer::DatalayerSystem& datalayerSystem,
-                                           const std::string& ip = "192.168.1.1",
-                                           const std::string& user = "boschrexroth",
-                                           const std::string& password = "boschrexroth", int sslPort = 443)
+                                           const std::string& ip = "192.168.1.2",
+                                           const std::string& user = "ipa",
+                                           const std::string& password = "Nobelstrasse12", int sslPort = 443)
 {
   std::string connectionString = getConnectionString(ip, user, password, sslPort);
   comm::datalayer::IClient* client = datalayerSystem.factory()->createClient(connectionString);
